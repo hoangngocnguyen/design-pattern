@@ -1,0 +1,11 @@
+SV001,Nguyễn Văn,An,8.5
+SV002,Trần Thị,Bình,7.2
+SV003,Lê Hoàng,Chi,9.0
+SV004,Phạm Minh,Đức,6.8
+SV005,Huỳnh Thị,Em,8.0
+SV006,Đỗ Văn,Phúc,5.5
+SV007,Nguyễn Thị,Giang,7.5
+SV008,Trần Văn,Hải,6.5
+SV009,Lê Thị,Hương,8.2
+SV010,Phạm Văn,Khoa,7.0
+SV011,Nguyễn Minh,Loan,9.2

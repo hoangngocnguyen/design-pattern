@@ -8,9 +8,9 @@ public class KetNoi {
 	private static KetNoi instance;
 	private Connection connection;
 
-	private static final String URL = "jdbc:mysql://localhost:3306/hoangshopdb";
+	private static final String URL = "jdbc:mysql://localhost:3306/test";
 	private static final String USER = "root";
-	private static final String PASSWORD = "123456";
+	private static final String PASSWORD = "";
 
 	private KetNoi() throws SQLException {
 	    try {

@@ -1,0 +1,47 @@
+CREATE TABLE Orders ( 
+    id INT IDENTITY(1,1) PRIMARY KEY, 
+    order_code NVARCHAR(20) NOT NULL UNIQUE, 
+    created_date DATETIME DEFAULT GETDATE(), 
+    total_amount DECIMAL(18,2) NOT NULL, 
+    status NVARCHAR(20) NOT NULL -- Lưu tên trạng thái: DRAFT, CONFIRMED,       
+                                 -- SHIPPING, DELIVERED, CANCELLED 
+);
+
+
+insert into Orders (order_code, total_amount, status) values
+--DRAFT
+('OD-DRAFT-001', 150000, 'DRAFT'),
+('OD-DRAFT-002', 120000, 'DRAFT'),
+('OD-DRAFT-003', 250000, 'DRAFT'),
+
+--CONFIRMED,       
+('OD-CONFIRMED-001', 1250000, 'CONFIRMED'),
+('OD-CONFIRMED-002', 150000, 'CONFIRMED'),
+('OD-CONFIRMED-003', 120000, 'CONFIRMED'),
+
+-- SHIPPING, 
+('OD-SHIPPING-001', 350000, 'SHIPPING'),
+('OD-SHIPPING-002', 220000, 'SHIPPING'),
+('OD-SHIPPING-003', 120000, 'SHIPPING'),
+
+--DELIVERED,
+('OD-DELIVERED-001', 430000, 'DELIVERED'),
+('OD-DELIVERED-002', 120000, 'DELIVERED'),
+('OD-DELIVERED-003', 10000, 'DELIVERED'),
+
+--CANCELLED 
+('OD-CANCELLED-001', 110000, 'CANCELLED'),
+('OD-CANCELLED-002', 180000, 'CANCELLED'),
+('OD-CANCELLED-003', 190000, 'CANCELLED')
+
+select * from Orders
+
+-- update
+select *
+from Orders
+where order_code = 'OD-DRAFT-001'
+
+
+update Orders
+set status = 'DRAFT'
+where order_code = 'OD-DRAFT-001'
