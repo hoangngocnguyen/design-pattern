@@ -17,7 +17,7 @@ public class KetNoi {
             // SỬA: Thay driver MySQL thành driver của MS SQL Server
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             this.connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Kết nối với MS SQL Server thành công!");
+//            System.out.println("Kết nối với MS SQL Server thành công!");
         } catch (ClassNotFoundException e) {
             // SỬA: Cập nhật thông báo lỗi cho đúng với SQL Server
             System.out.println("Lỗi: Không tìm thấy Driver MS SQL Server!");

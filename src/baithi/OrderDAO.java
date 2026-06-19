@@ -28,7 +28,7 @@ public class OrderDAO {
                 	double total = rs.getDouble("total_amount");
                 	String status = rs.getString("status");
                 	OrderState orderState = OrderStateFactory.getState(status);
-                    Order order = new Order(id, orderCode, date, total, orderState);
+                    Order order = new Order(id, code, date, total, orderState);
                     
                     return order; 
                 }
